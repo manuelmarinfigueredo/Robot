@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.robot.modelo;
 
+import java.util.Objects;
+
 public record Zona(int ancho, int alto) {
     public static int ANCHO_MINIMO = 10;
     public static int ANCHO_MAXIMO = 100;
@@ -36,9 +38,7 @@ public record Zona(int ancho, int alto) {
     }
 
     public boolean pertenece(Coordenada coordenada) {
-        if (coordenada == null){
-            throw new NullPointerException("La coordenada no puede ser nula.");
-        }
+        Objects.requireNonNull(coordenada,"La coordenada no puede ser nula." );
 
         /*
         boolean perteneceX = this.perteneceX(coordenada.x());
