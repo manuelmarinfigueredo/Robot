@@ -16,7 +16,7 @@ public class ControladorRobot {
         return new Robot(robot);
     }
 
-    public void ejecutar(char comando) throws OperationNotSupportedException, RobotExcepcion {
+    public void ejecutar(char comando) throws OperationNotSupportedException {
 
         switch (Character.toUpperCase(comando)) {
             case 'A':
